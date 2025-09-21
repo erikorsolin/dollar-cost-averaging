@@ -1,6 +1,6 @@
 # Calculadora de Aporte Mensal - Dollar Cost Averaging
 
-Este projeto implementa uma calculadora de aportes mensais baseada no **"Método Burro"** de investimentos, uma estratégia simples e eficaz para manter uma carteira diversificada e balanceada ao longo do tempo.
+Este projeto implementa uma calculadora de aportes mensais baseada no **"Método Burro"** de investimentos, uma estratégia simples para manter uma carteira diversificada e balanceada ao longo do tempo.
 
 ## O que é o "Método Burro"?
 
@@ -31,7 +31,7 @@ A calculadora analisa sua carteira atual e determina como distribuir seu aporte 
 Se sua meta é uma carteira diversificada com 4 classes de ativos:
 - **Carteira atual**: R$ 3.500 total (desbalanceada)
 - **Aporte mensal**: R$ 770
-- **Metas**: 50% RF, 30% RV Nacional, 15% RV Internacional, 5% REITs
+- **Metas**: 50% Renda Fixa, 30% Renda Variavel Nacional, 15% Renda Variavel Internacional, 5% REITs
 - **Carteira após aporte**: R$ 4.270 total
 - **Resultado**: Carteira automaticamente rebalanceada para as proporções desejadas
 
