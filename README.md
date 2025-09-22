@@ -1,4 +1,4 @@
-# Calculadora de Aporte Mensal - Dollar Cost Averaging
+# 💸 Calculadora de Aporte Mensal
 
 Este projeto implementa uma calculadora de aportes mensais baseada no **"Método Burro"** de investimentos, uma estratégia simples para manter uma carteira diversificada e balanceada ao longo do tempo.
 
