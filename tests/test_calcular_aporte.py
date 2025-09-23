@@ -7,7 +7,7 @@ import tempfile
 # Adicionar o diretório pai ao path para importar o módulo calculator
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from calculator import calcular_aporte
+from cli.calculator import calcular_aporte
 
 
 class TestCalcularAporte:
