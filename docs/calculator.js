@@ -42,7 +42,7 @@ function adicionarClasse(nome = '', valorAtual = '', metaPercentual = '') {
         </div>
         <div class="classe-fields">
             <div class="form-group">
-                <label>Nome da Classe:</label>
+                <label>Nome do Ativo:</label>
                 <input type="text" class="nome-classe" placeholder="Ex: Renda Fixa, Ações Brasil..." value="${nome}">
             </div>
             <div class="form-group">

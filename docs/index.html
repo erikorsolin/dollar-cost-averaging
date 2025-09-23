@@ -4,21 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Aporte Mensal - Dollar Cost Averaging</title>
+    <title>Balanceamento Automático de Carteira</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <header>
-            <h1>Calculadora de Aporte Mensal</h1>
-            <p class="subtitle">Dollar Cost Averaging - "Método Burro"</p>
+            <h1>Balanceamento Automático de Carteira</h1>
         </header>
 
         <div class="card">
             <h2>Configuração do Aporte</h2>
             <div class="form-group">
-                <label for="aporte-total">Aporte Mensal Total (R$):</label>
+                <label for="aporte-total">Aporte Total (R$):</label>
                 <input type="number" id="aporte-total" min="0" step="0.01" placeholder="800.00">
             </div>
         </div>
@@ -30,7 +29,7 @@
             </div>
 
             <div class="button-group">
-                <button id="add-classe" class="btn btn-primary">+ Adicionar Classe</button>
+                <button id="add-classe" class="btn btn-primary">+ Adicionar Ativo</button>
                 <button id="exemplo-preset" class="btn btn-secondary">Carregar Exemplo</button>
             </div>
 
@@ -74,8 +73,8 @@
         </div>
 
         <footer>
-            <p><strong>Dica:</strong> O "Método Burro" rebalanceia automaticamente sua carteira a cada aporte,
-                mantendo as proporções desejadas sem análise complexa de mercado.</p>
+            <p><strong>Explicação:</strong> O método "Dollar-cost averaging (DCA)" rebalanceia automaticamente sua carteira a cada aporte,
+                mantendo as proporções percentuais desejadas.</p>
         </footer>
     </div>
 
