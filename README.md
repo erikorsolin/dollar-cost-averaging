@@ -85,7 +85,9 @@ Crie um arquivo `dados_carteira.json` com suas classes de ativos e configuraçõ
 
 ## Como Usar
 
-### Execução
+### Versão CLI (Linha de Comando)
+
+#### Execução
 
 ```bash
 make
@@ -96,7 +98,25 @@ ou
 python3 calculator.py
 ```
 
-### Saída Esperada
+### Versão Web (Interface Gráfica)
+
+Para uma experiência mais intuitiva, você pode usar a **interface web**:
+
+1. **Abra o arquivo** `web/index.html` no seu navegador
+2. **Configure seus dados** diretamente na interface
+3. **Veja os resultados** em tempo real
+
+#### Funcionalidades da Interface Web:
+- ✅ Cálculo em tempo real
+- ✅ Interface responsiva (mobile-friendly)
+- ✅ Validação automática dos percentuais
+- ✅ Exemplo pré-carregado
+- ✅ Funciona offline
+- ✅ Totalmente independente (não usa arquivos externos)
+
+📁 **Mais detalhes:** Veja [web/README.md](web/README.md) para documentação completa da interface web.
+
+#### Saída Esperada (CLI)
 
 ```
 ==================================================
@@ -152,6 +172,32 @@ Você pode ajustar facilmente:
 - **Quantas classes de ativos quiser** (2, 5, 10+...)
 - **Percentuais de alocação** para cada classe
 - **Nomes das classes** (use os que fizerem sentido para você)
+
+## Estrutura do Projeto
+
+```
+dollar-costa-averaging/
+├── calculator.py              # Aplicação principal (CLI)
+├── dados_carteira.json        # Configuração da carteira
+├── Makefile                   # Comandos de build e execução
+├── README.md                  # Documentação principal
+├── LICENSE                    # Licença MIT
+├── Dockerfile                 # Container para aplicação
+├── docker-compose.yml         # Orquestração de containers
+├── requirements.txt           # Dependências Python
+├── tests/                     # Testes automatizados
+│   ├── __init__.py
+│   ├── conftest.py
+│   ├── test_calcular_aporte.py
+│   ├── test_arquivo_json.py
+│   ├── test_validacao.py
+│   └── test_edge_cases.py
+└── web/                       # Interface Web
+    ├── index.html             # Página principal
+    ├── style.css              # Estilos CSS
+    ├── calculator.js          # Lógica JavaScript
+    └── README.md              # Documentação da interface web
+```
 
 
 ## Requisitos

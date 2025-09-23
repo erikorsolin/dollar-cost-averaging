@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Aporte Mensal - Dollar Cost Averaging</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de Aporte Mensal</h1>
+            <p class="subtitle">Dollar Cost Averaging - "Método Burro"</p>
+        </header>
+
+        <div class="card">
+            <h2>Configuração do Aporte</h2>
+            <div class="form-group">
+                <label for="aporte-total">Aporte Mensal Total (R$):</label>
+                <input type="number" id="aporte-total" min="0" step="0.01" placeholder="800.00">
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Classes de Ativos</h2>
+            <div id="classes-container">
+                <!-- Classes serão adicionadas dinamicamente aqui -->
+            </div>
+
+            <div class="button-group">
+                <button id="add-classe" class="btn btn-primary">+ Adicionar Classe</button>
+                <button id="exemplo-preset" class="btn btn-secondary">Carregar Exemplo</button>
+            </div>
+
+            <div class="meta-total">
+                <strong>Total das Metas: <span id="total-percentual">0.0</span>%</strong>
+                <span id="warning-percentual" class="warning hidden">O total deve somar 100%</span>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="calcular" class="btn btn-success btn-large">Calcular Aporte</button>
+            <button id="limpar" class="btn btn-danger">Limpar Tudo</button>
+        </div>
+
+        <div id="resultado" class="card hidden">
+            <h2>Resultado da Análise</h2>
+
+            <div class="resultado-section">
+                <h3>Carteira ANTES do Aporte:</h3>
+                <div id="carteira-antes"></div>
+                <div class="total-patrimonio">
+                    <strong>Patrimônio Total: R$ <span id="total-antes">0.00</span></strong>
+                </div>
+            </div>
+
+            <div class="resultado-section">
+                <h3>Recomendação de Aporte:</h3>
+                <div id="recomendacao-aporte"></div>
+                <div class="total-aporte">
+                    <strong>Total Aportado: R$ <span id="total-aporte-calculado">0.00</span></strong>
+                </div>
+            </div>
+
+            <div class="resultado-section">
+                <h3>Carteira DEPOIS do Aporte:</h3>
+                <div id="carteira-depois"></div>
+                <div class="total-patrimonio">
+                    <strong>Novo Patrimônio Total: R$ <span id="total-depois">0.00</span></strong>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Dica:</strong> O "Método Burro" rebalanceia automaticamente sua carteira a cada aporte,
+                mantendo as proporções desejadas sem análise complexa de mercado.</p>
+        </footer>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+
+</html>
