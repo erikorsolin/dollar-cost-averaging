@@ -6,17 +6,19 @@ Esta é a versão web da calculadora de Dollar Cost Averaging (Método Burro), q
 
 1. **Abra o arquivo `index.html`** no seu navegador
 2. **Configure o aporte mensal** no campo "Aporte Mensal Total"
-3. **Adicione suas classes de ativos**:
+3. **Adicione suas classes de ativos** clicando em "+ Adicionar Classe":
    - Nome da classe (ex: "CDBs", "ETFs", "Ações Brasil")
    - Valor atual em reais
    - Meta percentual desejada
-4. **Clique em "Calcular Aporte"** para ver a recomendação
+4. **Clique em "Carregar Exemplo"** se quiser ver um exemplo pronto
+5. **Clique em "Calcular Aporte"** para ver a recomendação
 
 ## Funcionalidades
 
 - ✅ **Cálculo automático** do aporte ideal para cada classe
 - ✅ **Validação** dos percentuais (devem somar 100%)
-- ✅ **Exemplo pré-carregado** para demonstração
+- ✅ **Página inicia limpa** - adicione suas classes conforme necessário
+- ✅ **Numeração automática** - as classes são renumeradas automaticamente
 - ✅ **Interface responsiva** - funciona em desktop e mobile
 - ✅ **Resultado detalhado** mostrando carteira antes e depois
 

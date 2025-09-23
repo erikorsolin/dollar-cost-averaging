@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
     calcularBtn.addEventListener('click', calcularAporte);
     limparBtn.addEventListener('click', limparTudo);
 
-    // Carregar exemplo inicial
-    carregarExemplo();
+    // Inicializar sem exemplo - página limpa
+    atualizarTotalPercentual();
 });
 
 function adicionarClasse(nome = '', valorAtual = '', metaPercentual = '') {
@@ -71,8 +71,29 @@ function removerClasse(classeId) {
     const classeDiv = document.getElementById(classeId);
     if (classeDiv) {
         classeDiv.remove();
+        renumerarClasses();
         atualizarTotalPercentual();
     }
+}
+
+function renumerarClasses() {
+    const classeItems = document.querySelectorAll('.classe-item');
+    contadorClasses = classeItems.length;
+
+    classeItems.forEach((item, index) => {
+        const numeroDiv = item.querySelector('.classe-numero');
+        if (numeroDiv) {
+            numeroDiv.textContent = index + 1;
+        }
+
+        // Atualizar o ID e onclick do botão remover
+        const novoId = `classe-${index + 1}`;
+        item.id = novoId;
+        const removeBtn = item.querySelector('.remove-classe');
+        if (removeBtn) {
+            removeBtn.setAttribute('onclick', `removerClasse('${novoId}')`);
+        }
+    });
 }
 
 function atualizarTotalPercentual() {
