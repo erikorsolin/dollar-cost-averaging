@@ -23,6 +23,14 @@ document.addEventListener('DOMContentLoaded', function () {
     calcularBtn.addEventListener('click', calcularAporte);
     limparBtn.addEventListener('click', limparTudo);
 
+    // Eventos do modal PIX
+    document.getElementById('coffee-btn').addEventListener('click', abrirModalPix);
+    document.getElementById('close-modal').addEventListener('click', fecharModalPix);
+    document.getElementById('pix-modal').addEventListener('click', function (e) {
+        if (e.target === this) fecharModalPix();
+    });
+    document.getElementById('copy-pix').addEventListener('click', copiarChavePix);
+
     // Inicializar sem exemplo - página limpa
     atualizarTotalPercentual();
 });
@@ -318,3 +326,68 @@ function exibirResultado(resultado) {
     resultadoDiv.classList.remove('hidden');
     resultadoDiv.scrollIntoView({ behavior: 'smooth' });
 }
+
+// Funções do Modal PIX
+function abrirModalPix() {
+    document.getElementById('pix-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function fecharModalPix() {
+    document.getElementById('pix-modal').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+function copiarChavePix() {
+    const chavePix = document.getElementById('pix-key').textContent;
+
+    if (navigator.clipboard && window.isSecureContext) {
+        // Usar API Clipboard moderna
+        navigator.clipboard.writeText(chavePix).then(() => {
+            mostrarMensagemCopia();
+        }).catch(() => {
+            copiarTextoFallback(chavePix);
+        });
+    } else {
+        // Fallback para navegadores mais antigos
+        copiarTextoFallback(chavePix);
+    }
+}
+
+function copiarTextoFallback(texto) {
+    const textArea = document.createElement('textarea');
+    textArea.value = texto;
+    textArea.style.position = 'fixed';
+    textArea.style.opacity = '0';
+    document.body.appendChild(textArea);
+    textArea.select();
+
+    try {
+        document.execCommand('copy');
+        mostrarMensagemCopia();
+    } catch (err) {
+        alert('Não foi possível copiar automaticamente. Por favor, selecione e copie a chave PIX manualmente.');
+    }
+
+    document.body.removeChild(textArea);
+}
+
+function mostrarMensagemCopia() {
+    const botao = document.getElementById('copy-pix');
+    const textoOriginal = botao.textContent;
+
+    botao.textContent = '✅ Copiado!';
+    botao.style.background = 'linear-gradient(135deg, #27ae60, #2ecc71)';
+
+    setTimeout(() => {
+        botao.textContent = textoOriginal;
+        botao.style.background = '';
+    }, 2000);
+}
+
+// Fechar modal com ESC
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        fecharModalPix();
+    }
+});

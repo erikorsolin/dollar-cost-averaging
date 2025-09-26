@@ -19,7 +19,7 @@
             <h2>Configuração do Aporte</h2>
             <div class="form-group">
                 <label for="aporte-total">Aporte Total (R$):</label>
-                <input type="number" id="aporte-total" min="0" step="0.01" placeholder="800.00">
+                <input type="number" id="aporte-total" min="0" step="0.01" placeholder="0.00">
             </div>
         </div>
 
@@ -77,7 +77,29 @@
             <p><strong>Explicação:</strong> O método "Dollar-cost averaging (DCA)" rebalanceia automaticamente sua
                 carteira a cada aporte,
                 mantendo as proporções percentuais desejadas.</p>
+
+            <div class="coffee-section">
+                <button id="coffee-btn" class="btn btn-coffee">☕ Buy me a coffee</button>
+            </div>
         </footer>
+    </div>
+
+    <!-- Modal PIX -->
+    <div id="pix-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>☕ Obrigado pelo apoio!</h3>
+                <button class="modal-close" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Se este projeto te ajudou, considere fazer uma doação via PIX:</p>
+                <div class="pix-container">
+                    <div class="pix-key" id="pix-key">5076a610-5386-444b-b8be-851f63302595</div>
+                    <button id="copy-pix" class="btn btn-primary">📋 Copiar Chave PIX</button>
+                </div>
+                <p class="pix-note">Qualquer valor é muito bem-vindo! 🙏</p>
+            </div>
+        </div>
     </div>
 
     <script src="calculator.js"></script>
