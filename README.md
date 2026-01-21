@@ -1,8 +1,5 @@
 # Calculadora Dollar Cost Averaging
 
-<img width="918" height="912" alt="image" src="https://github.com/user-attachments/assets/3df72602-f9fd-43e3-9013-3224d0c432f9" />
-
-
 ## Como usar
 
 1. **Abra o arquivo `index.html`** no seu navegador
