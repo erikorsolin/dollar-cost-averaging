@@ -1,65 +1,61 @@
-# Calculadora Dollar Cost Averaging
+# Interface Web - Calculadora Dollar Cost Averaging
 
-Calculadora de aportes mensais usando o "Método Burro" - estratégia que rebalanceia automaticamente sua carteira a cada aporte, mantendo as proporções desejadas.
+Esta é a versão web da calculadora de Dollar Cost Averaging (Método Burro), que permite realizar os mesmos cálculos da aplicação CLI diretamente no navegador com um visual profissional e limpo.
 
-## Versões Disponíveis
+## Como usar
 
-### 📁 CLI (Linha de Comando)
-Aplicação Python que lê configurações de um arquivo JSON e calcula os aportes.
+1. **Abra o arquivo `index.html`** no seu navegador
+2. **Configure o aporte mensal** no campo "Aporte Mensal Total"
+3. **Adicione suas classes de ativos** clicando em "+ Adicionar Classe":
+   - Nome da classe (ex: "CDBs", "ETFs", "Ações Brasil")
+   - Valor atual em reais
+   - Meta percentual desejada
+4. **Clique em "Carregar Exemplo"** se quiser ver um exemplo pronto
+5. **Clique em "Calcular Aporte"** para ver a recomendação
 
-**Como usar:**
-```bash
-# Executar
-make
-# ou
-python3 calculator.py
+## Funcionalidades
+
+- ✅ **Cálculo automático** do aporte ideal para cada classe
+- ✅ **Validação** dos percentuais (devem somar 100%)
+- ✅ **Página inicia limpa** - adicione suas classes conforme necessário
+- ✅ **Numeração automática** - as classes são renumeradas automaticamente
+- ✅ **Interface responsiva** - funciona em desktop e mobile
+- ✅ **Resultado detalhado** mostrando carteira antes e depois
+
+## Estrutura dos arquivos
+
+```
+web/
+├── index.html      # Interface principal
+├── style.css       # Estilos e layout responsivo
+├── calculator.js   # Lógica de cálculo e manipulação DOM
+└── README.md       # Este arquivo
 ```
 
-**Configuração (dados_carteira.json):**
-```json
-{
-    "aporteMensalTotal": 800.0,
-    "classesAtivos": [
-        {
-            "nome": "Renda Fixa",
-            "valorAtual": 2000.00,
-            "metaPercentual": 65.0
-        },
-        {
-            "nome": "Renda Variável",
-            "valorAtual": 1000.00,
-            "metaPercentual": 35.0
-        }
-    ]
-}
-```
+## Exemplo de uso
 
-### 🌐 Interface Web
-Versão web com interface gráfica - não depende de arquivos JSON.
+1. **Carregue o exemplo padrão** clicando em "Carregar Exemplo"
+2. **Modifique os valores** conforme sua carteira atual
+3. **Ajuste as metas** para seus objetivos de alocação
+4. **Calculate** para ver exatamente quanto aportar em cada classe
 
-**Como usar:**
-```bash
-# Abrir no navegador
-open docs/index.html
-# ou servidor local
-cd docs/
-python3 -m http.server 8000
-```
+## Compatibilidade
 
-📖 **Documentação completa:** [docs/README.md](docs/README.md)
+- 🌐 **Funciona offline** - não precisa de servidor
+- 📱 **Mobile-friendly** - interface adaptada para celular
+- ⚡ **Cálculo instantâneo** - resultado em tempo real
+- 🎯 **Standalone** - não depende de arquivos externos
+- 💼 **Visual profissional** - design limpo e minimalista
 
 ## Algoritmo
 
-1. Calcula valor ideal de cada classe baseado na meta percentual
-2. Determina necessidade de aporte para cada classe  
-3. Distribui o aporte priorizando classes mais distantes da meta
-4. Rebalanceia automaticamente mantendo proporções desejadas
+O algoritmo implementado é exatamente o mesmo da versão CLI:
 
-## Requisitos
+1. **Calcula o valor ideal** de cada classe baseado na meta percentual
+2. **Determina a necessidade** de aporte para cada classe
+3. **Distribui o aporte** priorizando classes mais distantes da meta
+4. **Rebalanceia automaticamente** mantendo as proporções desejadas
 
-- Python 3.6+
-- Módulos padrão: `json`, `os`, `datetime`
+---
 
-## Licença
-
-MIT License - veja o arquivo [LICENSE](LICENSE) para detalhes.
+💡 **Dica:** Esta interface web tem design profissional e é completamente independente, calculando tudo baseado nos valores inseridos nos formulários!

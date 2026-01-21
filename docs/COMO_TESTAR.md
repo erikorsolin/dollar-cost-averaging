@@ -30,7 +30,7 @@ Abra o arquivo `web/index.html` diretamente no seu navegador:
 - ✅ Adicionar/remover classes de ativos
 - ✅ Validação automática (percentuais devem somar 100%)
 - ✅ Cálculo em tempo real
-- ✅ Interface responsiva (teste no celular)
+- ✅ Interface responsiva
 - ✅ Exemplo pré-carregado
 
 ## Teste completo
